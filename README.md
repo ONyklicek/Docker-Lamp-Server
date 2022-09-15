@@ -27,7 +27,7 @@ As of now, we have several different PHP versions. Use appropriate php version a
 
 ```shell
 git clone https://github.com/ONyklicek/Docker-Lamp-Server.git
-cd docker-compose-lamp/
+cd Docker-Lamp-Server/
 cp sample.env .env
 // modify sample.env as needed
 docker-compose up -d
