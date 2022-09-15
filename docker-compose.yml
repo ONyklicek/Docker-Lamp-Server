@@ -27,6 +27,7 @@ services:
       MYSQL_DATABASE: ${MYSQL_DATABASE}
       HOST_MACHINE_MYSQL_PORT: ${HOST_MACHINE_MYSQL_PORT}
       XDEBUG_CONFIG: "client_host=host.docker.internal remote_port=${XDEBUG_PORT}"
+      TZ: ${TIME_ZONE}
     extra_hosts:
       - "host.docker.internal:host-gateway"
   database:
@@ -45,6 +46,7 @@ services:
       MYSQL_DATABASE: ${MYSQL_DATABASE}
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      TZ: ${TIME_ZONE}
   phpmyadmin:
     image: phpmyadmin
     container_name: "${COMPOSE_PROJECT_NAME}-phpmyadmin"
@@ -60,6 +62,7 @@ services:
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
       UPLOAD_LIMIT: ${UPLOAD_LIMIT}
       MEMORY_LIMIT: ${MEMORY_LIMIT}
+      TZ: ${TIME_ZONE}
     ports:
       - "${HOST_MACHINE_PMA_PORT}:80"
       - "${HOST_MACHINE_PMA_SECURE_PORT}:443"
