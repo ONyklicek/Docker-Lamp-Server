@@ -33,7 +33,6 @@
                                     <?php
                                     $link = mysqli_connect("database", "root", $_ENV['MYSQL_ROOT_PASSWORD'], null);
 
-/* check connection */
                                     if (mysqli_connect_errno()) {
                                         printf("MySQL connecttion failed: %s", mysqli_connect_error());
                                     } else {
@@ -44,6 +43,21 @@
                                     mysqli_close($link);
                                     ?>
                                 </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h3 class="title is-3 has-text-centered">Projekty</h3>
+                        <hr>
+                        <div class="content">
+                            <ul>
+                            <?php 
+                                $dirs = array_filter(glob('projects/*'), 'is_dir');
+                                foreach ($dirs as $key => $value): ?>
+                                <?php $FolderName = str_replace("projects/", "", $value) ?>
+                                <li><a href="<?= $value ?>"><?= $FolderName ?></a></li>
+                            <?php endforeach; ?>
+
                             </ul>
                         </div>
                     </div>
