@@ -293,9 +293,7 @@ In Production you should modify at a minimum the following subjects:
 
 ## TODO
 
-### Apache
-- Add customize variable 
-
+- Add support Avahi
 
 
 
