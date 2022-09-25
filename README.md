@@ -138,6 +138,23 @@ docker-compose exec webserver bash
 
 ## PHP
 
+#### VARIABLE
+| FUNCTION | NAME | DEFAULT |
+| ------------- | ------------- | ------------- |
+| memory_limit | PHP_MEMORY_LIMIT  | 256M |
+| post_max_size | PHP_POST_MAX_SIZE  | 100M |
+| upload_max_filesize | PHP_UPLOAD_MAX_FILESIZE | 100M |
+| output_buffering | PHP_OUTPUT_BUFFERING | OFF |
+| implicit_flush | PHP_IMPLICIT_FLUSH | OFF |
+| display_errors | PHP_DISPLAY_ERRORS | 1 |
+| html_errors | PHP_HTML_ERRORS | 1 |
+| log_errors | PHP_LOG_ERRORS | 0 |
+| auto_prepend_file | PHP_AUTO_PREPEND_FILE | NULL |
+| auto_append_file | PHP_AUTO_APPEND_FILE | NULL |
+
+
+
+
 The installed version of php depends on your `.env`file.
 
 #### Extensions
