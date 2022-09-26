@@ -292,13 +292,6 @@ If you would like your local testing environment to exactly match your productio
 
 Done. The LAMP container will auto pull in any SSL certificates in `config/ssl` when it starts. As long as you configure the vhosts file correctly and place the SSL certificates in `config/ssl`, any time you turn on your LAMP container `https` will work on your specified domains.
 
-## Contributing
-
-We are happy if you want to create a pull request or help people with their issues. If you want to create a PR, please remember that this stack is not built for production usage, and changes should be good for general purpose and not overspecialized.
-
-> Please note that we simplified the project structure from several branches for each php version, to one centralized master branch. Please create your PR against master branch.
->
-> Thank you!
 
 ## Why you shouldn't use this stack unmodified in production
 
