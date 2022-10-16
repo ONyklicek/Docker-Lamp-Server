@@ -80,6 +80,7 @@ services:
     volumes:
       - /sessions
       - ${PHP_INI-./config/php/php.ini}:/usr/local/etc/php/conf.d/php-phpmyadmin.ini
+    restart: "always"
   redis:
     container_name: "${COMPOSE_PROJECT_NAME}-redis"
     image: redis:latest
